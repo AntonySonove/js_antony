@@ -47,3 +47,16 @@ const newSuperTexte=localStorage.getItem("monSuperTexte");
 input.value=newSuperTexte;
 
 input.addEventListener("keyup",()=>test=localStorage.setItem("monSuperTexte",input.value));
+
+
+//vanta
+VANTA.BIRDS({
+    el: "#vanta",
+    mouseControls: true,
+    touchControls: true,
+    gyroControls: false,
+    minHeight: 200.00,
+    minWidth: 200.00,
+    scale: 1.00,
+    scaleMobile: 1.00
+  })
