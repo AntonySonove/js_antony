@@ -18,12 +18,12 @@ truc.addEventListener("click",()=>{
     titre.style.display="block";
 })
 
-// const input=document.getElementById("input");
+const input=document.getElementById("input");
 // console.log(input);
 // const inputBlur= input.blur(input.style.backgroundColor="blue");
 
-// input.addEventListener("focus",()=>input.style.backgroundColor="blue");
-// input.addEventListener("blur",()=>input.style.backgroundColor="white");
+input.addEventListener("focus",()=>input.style.backgroundColor="blue");
+input.addEventListener("blur",()=>input.style.backgroundColor="white");
 
 
 // * Mini test pour capter event du Clavier
@@ -34,10 +34,10 @@ truc.addEventListener("click",()=>{
 // });
 
 
-const input=document.getElementById("input");
+// const input=document.getElementById("input");
 const recupTexte=document.getElementById("recupTexte");
 
-input.addEventListener("keyup",(eventClavier)=>recupTexte.innerText+=eventClavier.key);
+input.addEventListener("keyup",()=>recupTexte.innerText=input.value);
 
 
 //local storage
@@ -46,4 +46,4 @@ input.addEventListener("keyup",(eventClavier)=>recupTexte.innerText+=eventClavie
 const newSuperTexte=localStorage.getItem("monSuperTexte");
 input.value=newSuperTexte;
 
-input.addEventListener("keyup",(eventClavier)=>test=localStorage.setItem("monSuperTexte",eventClavier.key));
+input.addEventListener("keyup",()=>test=localStorage.setItem("monSuperTexte",input.value));
