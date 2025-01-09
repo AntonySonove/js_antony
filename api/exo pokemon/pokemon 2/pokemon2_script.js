@@ -36,6 +36,10 @@ const contactApi= async()=>{
     poussachaImg.setAttribute("width","150")
     const poussachaName=document.body.appendChild(document.createElement("h3"));
     poussachaName.innerText+=dataTransformed[i].name.fr;
+    poussachaImg.setAttribute("width","150")
+    const poussachaType1=document.body.appendChild(document.createElement("h4"));
+    poussachaType1.innerText+=dataTransformed[i].types[0].name;
+    //! utiliser un if et la fonction qui permet de demander si le tableau contient un "type 2" pour le lister si il existe
     const poussachaWeight=document.body.appendChild(document.createElement("h4"));
     poussachaWeight.innerText+=dataTransformed[i].weight;
     const poussachaHeight=document.body.appendChild(document.createElement("h4"));
@@ -43,7 +47,7 @@ const contactApi= async()=>{
     }
 
     //! il fallait que j'utilise :
-    console.log(dataTransformed[i].name.fr);
-    //! dans la boucle, et incrémenter i pour lister tous les pokémon avec les bons parametres (name, weight, height)
+    console.log(dataTransformed[0].name.fr);
+    //! dans la boucle, et incrémenter i (0 dans ce cas) pour lister tous les pokémon avec les bons parametres (name, weight, height)
 };
 contactApi();
