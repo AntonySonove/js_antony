@@ -18,30 +18,32 @@ const contactApi= async()=>{
     const poussacha= dataTransformed[0];
     console.log(poussacha);
 
-    //! faire une boucle pour récupérer tous les éléments?
-
     //! affichage du premier élément sur la page
-    const poussachaImg=document.body.appendChild(document.createElement("img"));
-    poussachaImg.setAttribute("src","https://raw.githubusercontent.com/Yarkis01/TyraDex/images/sprites/906/regular.png")
-    poussachaImg.setAttribute("width","150")
-    const poussachaName=document.body.appendChild(document.createElement("h3"));
-    poussachaName.innerText+=poussacha.name.fr;
-    const poussachaWeight=document.body.appendChild(document.createElement("h4"));
-    poussachaWeight.innerText+=poussacha.weight;
-    const poussachaHeight=document.body.appendChild(document.createElement("h4"));
-    poussachaHeight.innerText+=poussacha.height;
+    // const poussachaImg=document.body.appendChild(document.createElement("img"));
+    // poussachaImg.setAttribute("src","https://raw.githubusercontent.com/Yarkis01/TyraDex/images/sprites/906/regular.png")
+    // poussachaImg.setAttribute("width","150")
+    // const poussachaName=document.body.appendChild(document.createElement("h3"));
+    // poussachaName.innerText+=poussacha.name.fr;
+    // const poussachaWeight=document.body.appendChild(document.createElement("h4"));
+    // poussachaWeight.innerText+=poussacha.weight;
+    // const poussachaHeight=document.body.appendChild(document.createElement("h4"));
+    // poussachaHeight.innerText+=poussacha.height;
 
     //! test boucle pour afficher plusieurs éléments
     for(let i=0;i<dataTransformed.length;i++){
         const poussachaImg=document.body.appendChild(document.createElement("img"));
-    poussachaImg.setAttribute("src","https://raw.githubusercontent.com/Yarkis01/TyraDex/images/sprites/906/regular.png")
+    poussachaImg.setAttribute("src",dataTransformed[i].sprites.regular)
     poussachaImg.setAttribute("width","150")
     const poussachaName=document.body.appendChild(document.createElement("h3"));
-    poussachaName.innerText+=poussacha.name.fr;
+    poussachaName.innerText+=dataTransformed[i].name.fr;
     const poussachaWeight=document.body.appendChild(document.createElement("h4"));
-    poussachaWeight.innerText+=poussacha.weight;
+    poussachaWeight.innerText+=dataTransformed[i].weight;
     const poussachaHeight=document.body.appendChild(document.createElement("h4"));
-    poussachaHeight.innerText+=poussacha.height;
+    poussachaHeight.innerText+=dataTransformed[i].height;
     }
+
+    //! il fallait que j'utilise :
+    console.log(dataTransformed[i].name.fr);
+    //! dans la boucle, et incrémenter i pour lister tous les pokémon avec les bons parametres (name, weight, height)
 };
 contactApi();
