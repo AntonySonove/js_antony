@@ -21,8 +21,8 @@ const contactApi= async()=>{
 
     //! affichage du premier élément sur la page
     // const poussachaImg=document.body.appendChild(document.createElement("img"));
-    // poussachaImg.setAttribute("src","https://raw.githubusercontent.com/Yarkis01/TyraDex/images/sprites/906/regular.png")
-    // poussachaImg.setAttribute("width","150")
+    // poussachaImg.setAttribute("src","https://raw.githubusercontent.com/Yarkis01/TyraDex/images/sprites/906/regular.png");
+    // poussachaImg.setAttribute("width","150");
     // const poussachaName=document.body.appendChild(document.createElement("h3"));
     // poussachaName.innerText+=poussacha.name.fr;
     // const poussachaWeight=document.body.appendChild(document.createElement("h4"));
