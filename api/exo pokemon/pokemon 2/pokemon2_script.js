@@ -33,13 +33,13 @@ const contactApi= async()=>{
     //! test boucle pour afficher plusieurs éléments
     for(let i=0;i<dataTransformed.length;i++){
         const poussachaImg=document.body.appendChild(document.createElement("img"));
-    poussachaImg.setAttribute("src",dataTransformed[i].sprites.regular)
-    poussachaImg.setAttribute("width","150")
-    const poussachaName=document.body.appendChild(document.createElement("h3"));
-    poussachaName.innerText+=dataTransformed[i].name.fr;
-    poussachaImg.setAttribute("width","150")
-    const poussachaType1=document.body.appendChild(document.createElement("h4"));
-    poussachaType1.innerText+=dataTransformed[i].types[0].name;
+        poussachaImg.setAttribute("src",dataTransformed[i].sprites.regular)
+        poussachaImg.setAttribute("width","150")
+        const poussachaName=document.body.appendChild(document.createElement("h3"));
+        poussachaName.innerText+=dataTransformed[i].name.fr;
+        poussachaImg.setAttribute("width","150")
+        const poussachaType1=document.body.appendChild(document.createElement("h4"));
+        poussachaType1.innerText+=dataTransformed[i].types[0].name;
 
     //? utiliser un if et la fonction qui permet de demander si le tableau contient un "type 2" pour le lister si il existe?
     // const poussachaType2=document.body.appendChild(document.createElement("h4"));
