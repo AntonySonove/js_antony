@@ -10,6 +10,11 @@ export const contactApi=async()=>{
     const dataTransformed=await response.json();
     // console.log(dataTransformed);
 
-    const blague=document.body.appendChild(document.createElement("h4"));
+    const blague=document.getElementById("h1");
     blague.innerText=dataTransformed.value;
+}
+export const date=()=>{
+    const footer=document.querySelector("footer");
+    const footerDate=document.body.appendChild(document.createElement("p"));
+    footerDate.innerText="Cours Javascript"
 }
