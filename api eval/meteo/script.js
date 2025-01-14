@@ -13,8 +13,8 @@ const button=document.getElementById("bouton");
 const cardMeteo=document.getElementsByClassName("cardMeteo");
 console.log(cardMeteo);
 const info=document.createElement("div");
-
-document.body.appendChild(info);
+cardMeteo.insertBefore(info,button);
+// document.body.appendChild(info);
 
 
 
@@ -29,7 +29,7 @@ info.style.paddingTop="16px";
 info.style.paddingBottom="24px";
 info.style.paddingTop="12px";
 info.style.paddingTop="12px";
-info.style.backgroundColor="blue";
+// info.style.backgroundColor="blue";
 
 console.log (info);
 
